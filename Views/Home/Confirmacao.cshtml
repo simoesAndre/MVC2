@@ -1,0 +1,55 @@
+@model List<Paciente>
+
+<h4 style="font-weight: 400;">Agendamento confirmado com sucesso!!</h4>
+
+@foreach(Paciente a in Model)
+{
+    <div class="row">
+        <div class="col-6">
+            <form>
+                <div class="row" style="padding-top: 10px; padding bottom: 10px">
+                    <div class="col-2">
+                        <p>Nome:</p>
+                    </div>
+                    <div class="col-10">
+                        <p>@a.Nome</p>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 10px; padding bottom: 10px">
+                    <div class="col-2">
+                        <p>Telefone:</p>
+                    </div>
+                    <div class="col-10">
+                        <p>@a.Telefone</p>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 10px; padding bottom: 10px">
+                    <div class="col-2">
+                        <p>Data:</p>
+                    </div>
+                    <div class="col-10">
+                        <p>@a.Data</p>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 10px; padding bottom: 10px">
+                    <div class="col-2">
+                        <p>Animal:</p>
+                    </div>
+                    <div class="col-10">
+                        <p>@a.Animal</p>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 10px; padding bottom: 10px">
+                    <div class="col-2">
+                        <p>Necessidade:</p>
+                    </div>
+                    <div class="col-10">
+                        <p>@a.Necessidade</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+
+<a asp-action="Agendamento">Agendar novo paciente</a>
